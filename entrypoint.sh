@@ -7,6 +7,7 @@ fi
 if [ "$(ls -A /etc/cron.d)" ]; then
     echo "Found user configure(s)."
     chmod -R 644 /etc/cron.d
+    chown -R root:root /etc/cron.d
 else
     echo "Cannot find user configure(s). Exiting..."
     exit 1

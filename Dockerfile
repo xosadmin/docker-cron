@@ -2,7 +2,8 @@ FROM ubuntu:noble
 
 RUN apt-get update -y && apt-get install -y \
     cron \
-    tzdata
+    tzdata \
+    curl
 
 RUN apt clean all && \
     rm -rf /var/lib/apt/lists/*
