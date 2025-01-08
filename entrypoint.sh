@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! -z $TZ ]; then
+if [ -z $TZ ]; then
     echo "Timezone is not specified. Using UTC as default timezone"
     echo "UTC" > /etc/timezone
 fi
